@@ -1,0 +1,138 @@
+body,
+html {
+	font-family: Arial, sans-serif;
+	background-color: #1a1a1a;
+	color: #ffffff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+p {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+h1 {
+	font-size: 152px;
+	line-height: 160px;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+}
+
+nav ul li {
+	margin-left: 20px;
+}
+
+nav ul li a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.cta-button {
+	background-color: #8bc34a;
+	color: #1a1a1a;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.color-text {
+	background: linear-gradient(45deg, #3498db, #2ecc71);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* a.button-1 {
+    background: #1d1d1d;
+    padding: 15px 50px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+} */
+
+.button-1 {
+	display: inline-block;
+	padding: 15px 50px;
+	text-decoration: none;
+	font-size: 16px;
+	color: #fff;
+	background-color: transparent;
+	position: relative;
+	border-radius: 8px;
+}
+
+.button-1::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 8px;
+	padding: 2px;
+	background: linear-gradient(45deg, #3498db, #2ecc71);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor; /* For Safari */
+	mask-composite: exclude;
+}
+
+.button-1:hover {
+	background-color: #ffffffbc;
+	color: black;
+}
+
+/* CSS voor de footer */
+.footer {
+	background-color: #131313;
+	padding: 80px 0;
+	text-align: center;
+	color: #999999;
+	font-size: 14px;
+    border-top: 1px solid #999999;
+}
+.footer p {
+	margin-bottom: 10px;
+}
+.footer a {
+	color: #cccccc;
+	text-decoration: none;
+}
+.footer a:hover {
+	color: #ffffff;
+}
