@@ -108,6 +108,15 @@ nav ul li a {
 	width: fit-content;
 }
 
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.logo img {
+	width: 50px;
+}
+
 .button-1::before {
 	content: "";
 	position: absolute;
