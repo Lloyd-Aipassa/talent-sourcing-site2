@@ -105,6 +105,7 @@ nav ul li a {
 	background-color: transparent;
 	position: relative;
 	border-radius: 8px;
+	width: fit-content;
 }
 
 .button-1::before {
