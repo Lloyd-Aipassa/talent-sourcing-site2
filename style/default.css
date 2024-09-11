@@ -169,6 +169,10 @@ nav ul li a {
 		font-size: 14px;
 	}
 
+	.logo img {
+		width: 130px;
+	}
+
 	header {
 		flex-wrap: wrap;
 	}

@@ -1,6 +1,6 @@
 /* Bestaande stijlen */
 .hero {
-    padding: 100px 0;
+    padding:0;
 }
 
 .hero h1 {
@@ -176,7 +176,11 @@
         font-size: 48px;
     }
 
-    .info-container, .history-content {
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .history-content {
         flex-direction: column-reverse;
         align-items: center;
     }
@@ -196,7 +200,7 @@
 
     .history-section {
         margin-top: 100px;
-        padding-top: 100px;
+        padding: 0;
     }
 
   
@@ -209,7 +213,7 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 50px 0;
+        padding: 0;
     }
 
     .hero h1 {
@@ -221,8 +225,18 @@
         margin-bottom: 40px;
     }
 
+    .info-image {
+        width: 100%;
+        height: 100%    ;
+        position: relative;
+        left: 0;
+        z-index: 1;
+        border-radius: 10px;
+    }
+
     .info-section {
         margin-top: 60px;
+        padding: 0;
     }
 
     .info-content h2 {
@@ -249,7 +263,8 @@
     }
 
     .tools {
-        padding: 20px;
+        padding: 0;
+        margin: 80px 0;
     }
 }
 

@@ -4,9 +4,9 @@ main {
     flex-direction: column;
 }
 h1 {
-    font-size: 140px;
+
     margin-bottom: 100px;
-    line-height: 140px;
+
 }
 .tool-container {
     display: flex;
@@ -92,6 +92,13 @@ h1 {
 }
 
 @media (max-width: 768px) {
+
+    main {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
     .hero {
         padding: 50px 0;
     }
