@@ -53,3 +53,104 @@ h1 {
 }
 
 
+
+/* Responsieve aanpassingen */
+@media (max-width: 1024px) {
+    .hero h2, .history-section h2, .tools h2.color-text {
+        font-size: 48px;
+    }
+
+    .info-container, .history-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .info-image, .history-text {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .info-content, .history-image {
+        width: 100%;
+        padding: 20px;
+        padding: 0;
+    }
+
+    .history-section {
+        margin-top: 100px;
+        padding-top: 100px;
+    }
+
+  
+
+    .history-section h2 {
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero h1 {
+        margin: 30px 0;
+    }
+
+    .hero h2, .history-section h2, .tools h2.color-text {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .info-section {
+        margin-top: 60px;
+    }
+
+    .info-content h2 {
+        font-size: 28px;
+    }
+
+    .info-content p, .history-text p, .tool-info p {
+        font-size: 16px;
+    }
+
+    .history-text h3 {
+        font-size: 20px;
+        margin: 40px 0 10px;
+    }
+
+    .tool {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tool h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .tools {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2, .history-section h2, .tools h2.color-text {
+        font-size: 28px;
+    }
+
+    .info-content h2 {
+        font-size: 24px;
+    }
+
+    .tool h2 {
+        font-size: 28px;
+    }
+
+    .info-image {
+        height: 300px;
+    }
+}
