@@ -8,6 +8,11 @@ form {
     display: flex;
     flex-direction: column;
 }
+
+.lastname{
+    position: absolute;
+    left: -50000px;
+}
 label {
     margin-top: 10px;
     margin-bottom: 5px;
