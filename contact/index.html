@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/default.css">
+    <link rel="stylesheet" href="/style/contact.css">
+    <title>Contact</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><img src="/images/logo3.svg" width="300" alt=""></div>
+            <div class="menu-toggle">☰</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/wat-is-talent-sourcing">Wat is Talent sourcing</a></li>
+                    <li><a href="/talent-sourcing-geschiedenis/">Geschiedenis</a></li>
+                    <li><a href="/talent-sourcing-tools">Tools</a></li>
+                    <li><a href="/talent-sourcing-tips/">Tips</a></li>
+                    <li class="button-mob"> <a href="#contact" class="button-1">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="/contact" class="button-1 button-desk">Contact</a>
+        </header>
+        <h1>Stel een vraag</h1>
+        <form id="my-form" action="https://formspree.io/f/mrbzvpkn" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="Name" required>
+
+            <label for="message">Bericht:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button id="my-form-button" type="submit">Verzenden</button>
+            <p id="my-form-status"></p>
+        </form>
+
+
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 TalentSource. Alle rechten voorbehouden.</p>
+        <p>
+            <a href="#">Privacybeleid</a> |
+            <a href="#">Gebruiksvoorwaarden</a> |
+            <a href="/contact">Contact</a>
+        </p>
+    </footer>
+    <!-- Place this script at the end of the body tag -->
+    <script>
+        var form = document.getElementById("my-form");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Thanks for your submission!";
+                    form.reset()
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form"
+                        }
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+    <script src="/javascript/mob.js" defer></script>
+</body>
+
+</html>
