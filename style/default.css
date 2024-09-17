@@ -62,6 +62,14 @@ nav ul li a {
 	text-decoration: none;
 }
 
+a{
+	color: #3498db;
+}
+
+ol, ul{
+	margin-left: 30px;
+}
+
 
 .button-mob{
 	display: none;
